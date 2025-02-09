@@ -1,10 +1,11 @@
-import { SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import { Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
 const App = () => {
   return (
     <SafeAreaView style = {styles.container}>
       {/* View Compoent*/}
+      <Text style={styles.headerText}>View Component</Text>
       <View style={styles.boxContainer}>
         <View style ={styles.redBox} />
         <View style ={styles.blueBox} />
@@ -13,10 +14,20 @@ const App = () => {
       {/* View Compoent*/}
       {/* Text Compoent*/}
       <View style = {styles.textContainer}>
+      <Text style={styles.headerText}>Text Component</Text>
         <Text style = {styles.textComponent}>My first React Native Course</Text>
         <Text style = {styles.nestedText}>Text components can be <Text style={styles.bold}>nested</Text> as well.</Text>
       </View>
       {/* Text Compoent*/}
+      {/* Image Compoent*/}
+        <View style={styles.imageComponentContainer}>
+        <Text style={styles.headerText}>Image Component</Text>
+          {/* rendering a remote image*/}
+          <Image source={{uri: 'https://plus.unsplash.com/premium_photo-1664124381855-3131b9a386d8?q=80&w=2667&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}} style={styles.imageComponent}/>
+          {/* rendering a local image*/}
+          <Image source={require('./assets/React-icon.svg.png')} style={styles.localImageComponent}/>
+        </View>
+      {/* Image Compoent*/}
     </SafeAreaView>
   );
 };
@@ -25,20 +36,25 @@ export default App;
 
 const styles = StyleSheet.create({
   container:{
-    // flex: 1,
     justifyContent:'center',
-    marginBottom:20,
+    alignItems:'center',
+  },
+  headerText:{
+    fontWeight:'bold',
+    textDecorationLine:'underline',
   },
   boxContainer:{
-    flexDirection: 'row',
-    justifyContent:'space-around',
-    padding:'2%'
+    flexDirection:'row',
+    justifyContent:'space-evenly',
+    alignItems:'center',
+    padding:'2%',
+    width:'100%'
   },
   redBox:{
     height: 50,
     width: 50,
     backgroundColor:'red',
-    borderRadius: '50%'
+    borderRadius: '50%',
   },
   greenBox:{
     height: 50,
@@ -59,9 +75,25 @@ const styles = StyleSheet.create({
     padding: '2%',
   },
   nestedText:{
-    fontSize: 18
+    fontSize: 18,
   },
   bold:{
     fontWeight: 'bold',
+  },
+  imageComponentContainer:{
+    padding: '2%',
+    justifyContent:'center',
+    alignItems: 'center',
+    gap: '5%',
+  },
+  imageComponent:{
+    height: 200,
+    width: 200,
+    resizeMode:'contain',
+  },
+  localImageComponent:{
+    height: 200,
+    width: 200,
+    resizeMode:'contain',
   },
 });
