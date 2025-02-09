@@ -1,7 +1,8 @@
-import { Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import { Button, Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import React, { useState } from 'react';
 
 const App = () => {
+  const [count, setCount] = useState <number>(0);
   return (
     <SafeAreaView style = {styles.container}>
       {/* View Compoent*/}
@@ -28,6 +29,11 @@ const App = () => {
           <Image source={require('./assets/React-icon.svg.png')} style={styles.localImageComponent}/>
         </View>
       {/* Image Compoent*/}
+      {/* Button Component*/}
+      <Text style={styles.headerText}>Button Component</Text>
+      <Button title="Click Me" onPress={()=> setCount(count + 1)}/>
+      <Text>Count is {count}</Text>
+      {/* Button Component*/}
     </SafeAreaView>
   );
 };
@@ -48,7 +54,7 @@ const styles = StyleSheet.create({
     justifyContent:'space-evenly',
     alignItems:'center',
     padding:'2%',
-    width:'100%'
+    width:'100%',
   },
   redBox:{
     height: 50,
@@ -87,13 +93,13 @@ const styles = StyleSheet.create({
     gap: '5%',
   },
   imageComponent:{
-    height: 200,
-    width: 200,
+    height: 100,
+    width: 100,
     resizeMode:'contain',
   },
   localImageComponent:{
-    height: 200,
-    width: 200,
+    height: 100,
+    width: 100,
     resizeMode:'contain',
   },
 });
