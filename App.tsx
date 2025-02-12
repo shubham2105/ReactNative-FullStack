@@ -3,6 +3,7 @@ import React from 'react';
 import Basics from './src/components/Basics';
 import TextInputComponent from './src/components/TextInputComponent';
 import ScrollViewComponent from './src/components/ScrollView';
+import Styling from './src/components/Styling';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Basics/>
       <TextInputComponent/>
       <ScrollViewComponent/>
+      <Styling/>
     </ScrollView>
     </>
   );

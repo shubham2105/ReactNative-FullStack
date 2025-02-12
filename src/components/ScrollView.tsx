@@ -9,8 +9,6 @@ const ScrollViewComponent = () => {
       contentContainerStyle={styles.scrollViewContent}
       bounces={true}
       >
-        {/* 
-         */}
          {Array.from({ length: 20 }, (_, index) => (
           <View key={index} style={styles.box}>
             <Text style={styles.boxText}>{index + 1}</Text>
