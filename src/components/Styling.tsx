@@ -4,6 +4,7 @@ import React from 'react';
 const Styling = () => {
   return (
     <View style= {styles.container}>
+        <Text style ={styles.headerText}>Styling</Text>
       <Text style={{backgroundColor:'blue', width:'90%', color:'white', padding:'2%', fontWeight:'bold', textDecorationLine:'underline', borderRadius:5, marginBottom:10}}>Inline Styling</Text>
       <View style={styles.combinedTextStyleContainer}>
         <Text style={[styles.combinedTextStyle,{textDecorationLine:'underline'}]}>Combined Text Styling</Text>
@@ -20,6 +21,11 @@ const styles = StyleSheet.create({
         flex:1,
         justifyContent:'center',
         alignItems:'center',
+    },
+    headerText:{
+        fontWeight:'bold',
+        textDecorationLine:'underline',
+        padding:'2%',
     },
     combinedTextStyleContainer:{
         width:'90%',

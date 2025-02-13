@@ -4,6 +4,7 @@ import Basics from './src/components/Basics';
 import TextInputComponent from './src/components/TextInputComponent';
 import ScrollViewComponent from './src/components/ScrollView';
 import Styling from './src/components/Styling';
+import FlexLayout from './src/components/FlexLayout';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <TextInputComponent/>
       <ScrollViewComponent/>
       <Styling/>
+      <FlexLayout/>
     </ScrollView>
     </>
   );
