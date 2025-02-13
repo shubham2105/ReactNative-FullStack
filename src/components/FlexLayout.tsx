@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     columnContainer:{
       // flexDirection:'column',
       justifyContent:'space-between',
-      height:200,
+      height:150,
     },
     box:{
       height:30,

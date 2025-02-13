@@ -5,16 +5,18 @@ import TextInputComponent from './src/components/TextInputComponent';
 import ScrollViewComponent from './src/components/ScrollView';
 import Styling from './src/components/Styling';
 import FlexLayout from './src/components/FlexLayout';
+import Touchables from './src/components/Touchables';
 
 const App = () => {
   return (
     <>
-    <ScrollView contentContainerStyle={styles.ScrollView}>
+    <ScrollView contentContainerStyle={styles.ScrollView} keyboardShouldPersistTaps='handled'>
       <Basics/>
       <TextInputComponent/>
       <ScrollViewComponent/>
       <Styling/>
       <FlexLayout/>
+      <Touchables/>
     </ScrollView>
     </>
   );
